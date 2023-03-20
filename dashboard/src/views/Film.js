@@ -9,7 +9,7 @@ export default function Film() {
   const dispatch = useDispatch();
   let halaman = 1;
   const handlePageClick = (event) => {
-    dispatch(getFilm(event.selected +1))
+    dispatch(getFilm(event.selected + 1));
     console.log(`User requested page number ${event.selected}`);
   };
   useEffect(() => {
@@ -17,22 +17,27 @@ export default function Film() {
   }, []);
   return (
     <>
-      <div className="flex flex-wrap justify-center">
-        {film.map((movie, index) => {
-          return <FilmCards key={index} movie={movie} />;
-        })}
-      </div>
-      <br />
-      <div>
-        <ReactPaginate
-          className="react-paginate"
-          breakLabel="..."
-          nextLabel=">"
-          onPageChange={handlePageClick}
-          pageCount={20}
-          previousLabel="<"
-        />
-      </div>
+    {film.length == 0 &&  <h1 className="mt-20 text-center">Memuat...</h1>}
+      {film.length != 0 && (
+        <div>
+          <div className="flex flex-wrap justify-center">
+            {film.map((movie, index) => {
+              return <FilmCards key={index} movie={movie} />;
+            })}
+          </div>
+          <br />
+          <div>
+            <ReactPaginate
+              className="react-paginate"
+              breakLabel="..."
+              nextLabel=">"
+              onPageChange={handlePageClick}
+              pageCount={20}
+              previousLabel="<"
+            />
+          </div>
+        </div>
+      )}
     </>
   );
 }

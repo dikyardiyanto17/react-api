@@ -27,7 +27,7 @@ export default function FilmCards({ movie }) {
           </p>
         </div>
         <div className=" flex justify-center items-end mb-10 mt-0">
-          <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+          <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
             <a href={`https://www.themoviedb.org/movie/${movie.id}`}>Read</a>
           </button>
         </div>
