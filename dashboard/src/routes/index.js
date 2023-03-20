@@ -1,6 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom'
 import Layout from '../components/Layout';
 import Berita from '../views/Berita';
+import Film from '../views/Film';
 import Home from '../views/Home';
 import Pahlawan from '../views/Pahlawan';
 
@@ -21,11 +22,16 @@ const router = createBrowserRouter([
                     <Pahlawan />
                 )
             },
-            ,
             {
                 path: 'berita',
                 element: (
                     <Berita />
+                )
+            },
+            {
+                path: 'Film',
+                element: (
+                    <Film />
                 )
             }
         ]

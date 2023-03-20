@@ -10,7 +10,9 @@ const Navbar = () => {
           className="font-bold text-2xl cursor-pointer flex items-center font-[Poppins] 
       text-gray-800"
         >
-          React-Tailwind
+          <Link to='/'>
+          Info-Seputar-Indonesia
+          </Link>
         </div>
         <div
           onClick={() => setOpen(!open)}
@@ -39,12 +41,11 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="md:ml-8 text-xl md:my-0 my-7">
-            <a
-              href="/"
+            <Link to='/film'
               className="text-gray-800 hover:text-gray-400 duration-500"
             >
-              Film
-            </a>
+              Film Populer
+            </Link>
           </li>
         </ul>
       </div>

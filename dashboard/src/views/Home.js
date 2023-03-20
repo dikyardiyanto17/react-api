@@ -1,4 +1,3 @@
-import Navbar from "../components/Navbar";
 import HomeCards from "../components/HomeCards";
 
 export default function Home() {
@@ -16,7 +15,6 @@ export default function Home() {
   ];
   return (
     <>
-      <Navbar />
       <div className="App">
         <h1 className="text-3xl font-bold underline">Hello world!</h1>
       </div>
