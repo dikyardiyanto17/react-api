@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   let [open, setOpen] = useState(false);
@@ -24,20 +25,18 @@ const Navbar = () => {
           }`}
         >
           <li className="md:ml-8 text-xl md:my-0 my-7">
-            <a
-              href="/"
+            <Link to='/pahlawan'
               className="text-gray-800 hover:text-gray-400 duration-500"
             >
               Pahlawan
-            </a>
+            </Link>
           </li>
           <li className="md:ml-8 text-xl md:my-0 my-7">
-            <a
-              href="/"
+            <Link to='/berita'
               className="text-gray-800 hover:text-gray-400 duration-500"
             >
               Berita Terbaru
-            </a>
+            </Link>
           </li>
           <li className="md:ml-8 text-xl md:my-0 my-7">
             <a

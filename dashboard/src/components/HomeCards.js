@@ -1,30 +1,17 @@
-export default function HomeCards() {
+export default function HomeCards({ artikel }) {
   return (
     <>
-      <div class="max-w-sm rounded overflow-hidden shadow-lg m-10">
+      <div className="max-w-sm rounded overflow-hidden shadow-lg m-10 text-center flex justify-center flex-wrap mt-20" style={{width: '300px'}}>
         <img
-          class="w-full"
-          src="https://2.bp.blogspot.com/-NZobd804VcA/WgRzaPEaSKI/AAAAAAAAJSQ/uNN_-R8yGPQ1gFdq-ttxQxODs9Vj3rmxwCLcBGAs/s320/hari_pahlawan_by_idesegar.jpg"
-          alt="Sunset in the mountains"
+          src={artikel.image}
+          alt="Gambar"
+          style={{objectFit: 'cover', height: '200px'}}
         />
-        <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-          <p class="text-gray-700 text-base">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Voluptatibus quia, nulla! Maiores et perferendis eaque,
-            exercitationem praesentium nihil.
+        <div className="px-6 py-4 mb-0">
+          <div className="font-bold text-xl mb-2">{artikel?.name}</div>
+          <p className="text-gray-700 text-base">
+            {artikel?.description}
           </p>
-        </div>
-        <div class="px-6 pt-4 pb-2">
-          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            #photography
-          </span>
-          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            #travel
-          </span>
-          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            #winter
-          </span>
         </div>
       </div>
     </>

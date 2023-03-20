@@ -1,20 +1,14 @@
 import "./App.css";
-import HomeCards from "./components/HomeCards";
-import Navbar from "./components/Navbar";
+import router from "./routes";
+import { RouterProvider } from "react-router-dom";
+import { Provider } from 'react-redux'
+import store from "./stores";
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <div className="App">
-        <h1 className="text-3xl font-bold underline">Hello world!</h1>
-      </div>
-      <div className="flex flex-wrap justify-center">
-        <HomeCards />
-        <HomeCards />
-        <HomeCards />
-      </div>
-    </>
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   );
 }
 
