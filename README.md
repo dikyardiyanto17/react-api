@@ -2,5 +2,5 @@
 
 ## Fetching 3rd API
 ### NewsAPI
-### Pahlawan NAsionail Indonesia Api
+### Pahlawan Nasional Indonesia Api
 ### TMDB API
